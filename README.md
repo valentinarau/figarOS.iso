@@ -2,7 +2,7 @@
 
 ### Welcome human!
 You have been chosen to be part of our small community. This is a BETA test of the pioneer OS of the new era. <br> 
-One day cats and robots will take control of the world, but you are safe with us (as long as you follow our instructions). <br>
+One day cats and robots will take control of the world, but you are safe with us (as long as you follow our orders). <br>
 
 ### About
 This is an open-source OS made with Wollok and some python code. Its is simple, but its all humans need, you dont need any more that that. <br>
