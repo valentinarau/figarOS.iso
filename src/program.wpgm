@@ -1,0 +1,22 @@
+import wollok.game.*
+import example.*
+
+program juego{
+	game.cellSize(32)
+	game.height(15)
+	game.width(25)
+	
+	game.boardGround("assets/download.jpg")
+	pantallaInicio.iniciar()
+	
+	
+	keyboard.down().onPressDo{ modo.moverseHacia(opcionAbajo) }
+	keyboard.up().onPressDo{ modo.moverseHacia(opcionArriba) }
+	keyboard.x().onPressDo{ modo.seleccionar() }
+	keyboard.left().onPressDo{ modo.moverseHacia(opcionIzquierda) }
+	keyboard.right().onPressDo{ modo.moverseHacia(opcionDerecha) } 
+	keyboard.r().onPressDo{ pantallaInicio.volver() }
+	
+	game.start()
+	
+	}
