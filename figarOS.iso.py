@@ -23,6 +23,15 @@ def pixels_to_ascii(image):
     return(characters)    
 
 def main(new_width=100):
+
+    # booting 
+    bootingOS = int(input("Choose an operating system to start:\n1. figaro \n2. Windows 11\n3. Arch Linux\n"))
+
+    if(bootingOS != 1):
+        exit()
+
+    message = "\n\nlautaroocampo@Vivobook-S15\n--------------------\nOS: figaro v1.0.0\nHost: VivoBook S15 X510UF 1.0\nKernel: 1.0.0 - FIGARO\nUptime: 0.0001 ns\nPackages: 0\nShell: bash 5.1.8\nResolution 640x480\nDE: Catnip\nWM: uwu\nTheme: SynthWave\nIcons: Asuka Langley [Evangelion], bunny [uwu]\nTerminal: katsole\nCPU: Intel i7-855OU (8) @ 4.000GHz\nGPU: NVIDIA GeForce MX130\nGPU: Intel UHD Graphics 620\nMemory: 903MiB / 15888MiB\n"
+
     # attempt to open image from user-input
     path = input("Enter a valid pathname to an image:\n")
     try:
@@ -40,10 +49,12 @@ def main(new_width=100):
     
     # print result
     print(ascii_image)
+    print(message)
     
     # save result to "ascii_image.txt"
     with open("ascii_image.txt", "w") as f:
         f.write(ascii_image)
+        f.write(message)
  
 # run program
 main()
