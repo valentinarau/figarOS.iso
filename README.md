@@ -1,4 +1,4 @@
-# figarOS Operative System
+# figarOS - Operative System
 
 ### Welcome human!
 You have been chosen to be part of our small community. This is a BETA test of the pioneer OS of the new era. <br> 
