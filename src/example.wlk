@@ -156,7 +156,7 @@ class Menu inherits Interfaz {
 
 object pantallaInicio {
 	const property opciones = [comenzar, musica, creditos , salir]
-	const property opcionesGanar = [asuka,uwu,gatitos]
+	const property opcionesGanar = [asuka,uwu,zeroTwo]
 	const property opcionesPerder = [rei,angel]
 	var property juegoActivo = false
 	
@@ -228,11 +228,14 @@ object figaro{
 		game.say(self,"meow")
 		tocadiscos.tocar(meow)
 	}
+	method marcar(){}
+	
 }
 
 object lauti{
 	var property image = "assets/lauti2.gif"
 	var property position = game.at(22,0)
+	method marcar(){}
 }
 
 object monedas{
@@ -243,6 +246,8 @@ object cantidadMonedas{
 	var property position = game.at(21,0)
 	var property numero = 0
 	var property text = numero.toString()
+
+	method marcar(){}
 
 	method textColor() = "FFFFFF"
 	method aumentarMonedas(){

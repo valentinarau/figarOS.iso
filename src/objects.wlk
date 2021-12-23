@@ -11,7 +11,7 @@ class Windows{
 		error.image(errores.anyOne()) 
 		game.addVisualIn(error,game.at(13,3.randomUpTo(6))) 
 		tocadiscos.tocarFondo(errorWindows)
-		game.schedule(1000,{game.stop()})
+		game.schedule(2000,{game.stop()})
 	}
 	
 	method marcar(){
@@ -95,5 +95,5 @@ const angel = new Imagen(image = "assets/puto.png",position = game.at(20,3))
 const yatta = new Imagen(image = "assets/yatta.png",position = game.at(10,5))
 const cumple = new Imagen(image = "assets/happyB.png",position = game.at(10,3))
 const perdiste = new Imagen(image = "assets/perdiste.png",position = game.at(10,5))
-const gatitos = new Imagen(image = "assets/gatitos.png",position = game.at(10,5))
+const zeroTwo = new Imagen(image = "assets/02.png",position = game.at(3,3))
 
