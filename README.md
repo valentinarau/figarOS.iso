@@ -16,7 +16,7 @@ If you are here, im sorry, i wont help you. We only choose smart humans for tryi
 <b>TIP: you have to run wollok program and the iso</b>
 
 ## What we need <i>you</i> to do
-You have to proove us you have the skills to escape from LATAM. <br>
+You have to prove us you have the skills to escape from LATAM. <br>
 So, we developed a training for you. If you complete it, you will be rewarded. <br>
 Whats the training about? Well, you'll have to drive a car and pick up as many bitcoins as you can. <br>
 Lemme tell ya it aint easy, because you are driving across a road full of Windows bugs. If you touch them, your computer dies. <br>
