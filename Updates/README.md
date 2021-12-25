@@ -9,6 +9,7 @@ This is the first version of figarOS. <br>
 <li>Car theme: synthwave</li>
 <li>Crypto: bitcoin</li>
 <li>Songs: Dark Line , After Race, Sunset Breeze, Lotus in dam [Gran Turismo], Battle for Everyone Soul [Persona 5]</li>
+<li>Characters: Asuka Langley [Evangelion] , Zero Two [Darling in the Franxx] , random Uwu girl </li>
 <li>Menu Options: Start , Music , Credits , Quit</li> <br>
 
 ### what's next?
