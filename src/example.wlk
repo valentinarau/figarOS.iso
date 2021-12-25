@@ -208,7 +208,7 @@ object pantallaInicio {
         //comenzar.marcar()
         game.addVisual(bitcoinInicio)
         bitcoinInicio.animar()
-        game.schedule(3000,{tocadiscos.tocarFondo(tocadiscos.cancionActual())})
+        //game.schedule(3000,{tocadiscos.tocarFondo(tocadiscos.cancionActual())})
         modo.puntero(punteroInicio)
        
     }

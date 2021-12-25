@@ -4,11 +4,15 @@ import example.*
 object tocadiscos {
 	var cancionCreditos
 	var property cancionActual = "assets/Sunset Breeze.mp3"
-	var property fondo
+	var property fondo 
 	
     method tocar(ruta) {
         const sonido = game.sound(ruta)
         sonido.play()
+    }
+    
+    method iniciar(){
+    	game.schedule(3000,{self.tocarFondo(self.cancionActual())})
     }
     
     method tocarFondo(ruta){
