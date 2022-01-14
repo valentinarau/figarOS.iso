@@ -27,7 +27,7 @@ Lemme tell ya it aint easy, because you are driving across a road full of Window
 <i>arrows</i> - to move the cursor <br>
 
 <b>Tip: it is not necessary to touch any button when picking up a bitcoin, just move the cursor over it</b>
-
+ 
  
 ### Enjoy 
 ![figaro](https://user-images.githubusercontent.com/82102044/147118206-e93f91de-58d2-4aaf-8baf-a2a8bb9e5a0c.png)
