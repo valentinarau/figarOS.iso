@@ -47,10 +47,10 @@ class Bitcoin{
 }
 
 const bitcoinFrente = "assets/bitcoin.png"
-const bitcoinAtras = "assets/bitcoin - Copy.png"
-const bitcoin34 = "assets/bitcoin - Copy (2).png"
-const bitcoin43 = "assets/bitcoin - Copy - Copy (2).png"
-const bitcoinChata = "assets/bitcoin - Copy - Copy.png"
+const bitcoinAtras = "assets/bitcoin2.png"
+const bitcoin34 = "assets/bitcoin3.png"
+const bitcoin43 = "assets/bitcoin4.png"
+const bitcoinChata = "assets/bitcoin5.png"
 
 
 object generador{

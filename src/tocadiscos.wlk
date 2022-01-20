@@ -3,7 +3,7 @@ import example.*
 
 object tocadiscos {
 	var cancionCreditos
-	var property cancionActual = "assets/Sunset Breeze.mp3"
+	var property cancionActual = "assets/sunset-breeze.mp3"
 	var property fondo 
 	
     method tocar(ruta) {
@@ -65,11 +65,11 @@ object mp3{
 
 
 const canciones = [persona5db,gtDarkLine,gtAfterRace,gtLotus,gtSunset]
-const meow = "assets/Cat Meow 2.mp3"
+const meow = "assets/cat-meow-2.mp3"
 const windowsApagar = "assets/windowsApagar.mp3"
 const errorWindows = "assets/errorSonido.mp3"
 const persona5db = "assets/battleForEveryoneSoul.mp3"
-const gtDarkLine = "assets/Dark Line.mp3"
+const gtDarkLine = "assets/dark-line.mp3"
 const gtAfterRace = "assets/lounge.mp3"
-const gtLotus = "assets/Lotus in dam.mp3"
-const gtSunset = "assets/Sunset Breeze.mp3"
+const gtLotus = "assets/lotus-in-dam.mp3"
+const gtSunset = "assets/sunset-breeze.mp3"
