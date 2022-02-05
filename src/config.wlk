@@ -1,3 +1,12 @@
+import wollok.game.*
+import direcciones.*
+import interfaz.*
+import opciones.*
+import tocadiscos.*
+import recolectables.*
+import noRecolectables.*
+import menues.*
+
 // Direcciones
 
 const opcionArriba = new Direccion (lugares = 1,sentido = arriba)
@@ -15,7 +24,7 @@ const menuInicio = new Menu(
 )
 
 const menuMusica = new Menu(
-	image = "assets/unnamed.png",
+	imagen = "assets/unnamed.png",
 	position = game.at(1,0),
 	area = new AreaMenu(inicio = game.at(9,4), alto = 5, ancho = 5),
 	items = [atras,persona51,darkLine,afterRace,lotus,sunset]
@@ -48,6 +57,8 @@ const bitcoinChata = "assets/bitcoin5.png"
 
 const errores = ["assets/werror.png","assets/werrpr.png"]
 
+// Inicio
 
+const  bitcoinInicio = new Bitcoin (position = game.at(1,11)) 
 
 

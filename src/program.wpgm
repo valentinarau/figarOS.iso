@@ -1,10 +1,17 @@
 import wollok.game.*
-import example.*
+//import example.*
 import tocadiscos.*
 
-/*
+
 import menues.*
- */
+import config.*
+import recolectables.*
+import noRecolectables.*
+import interfaz.*
+import opciones.*
+import direcciones.*
+
+ 
 
 program juego{
 	game.cellSize(32)

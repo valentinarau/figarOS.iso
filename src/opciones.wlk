@@ -1,3 +1,9 @@
+import noRecolectables.*
+import wollok.game.*
+import interfaz.*
+import recolectables.*
+import tocadiscos.*
+import config.*
 class Opcion{
 	var property imagenR
 	var property image
@@ -82,3 +88,26 @@ object salir inherits Opcion(imagenR= "assets/salirR.png",image = "assets/salir.
 	}
 	
 }
+
+object atras{
+	var property text = "Atras"
+	var property position = game.at(10,9)
+	var color = "FFFFFF"
+	
+	method textColor() = color
+	
+	method pulsar(){
+		game.removeVisual(mp3)
+		menuMusica.removerse()
+		pantallaInicio.volver()
+		
+	}
+	
+	method marcar(){
+		color = "FF0080"
+	}
+	method desmarcar(){
+		color = "FFFFFF"
+	}
+}
+

@@ -84,11 +84,7 @@ class Interfaz {
 		area.posicionarItems(items)
 		items.forEach({ item => game.addVisual(item) })
 	}
-	//method display(){
-	//	items = self.itemsActuales()
-	//	self.posicionarItems()
-	//	
-	//}
+	
 	method itemsActuales()
 	method removerse(){
 		self.removerItems()
@@ -101,31 +97,7 @@ class Interfaz {
 
 
 
-class Cancion{
-	var property text
-	var sonido
-	var property position = game.origin()
-	var color = "ffffff"
-	var cancionActual = ""
-	
-	method textColor() = color
-	
-	method marcar(){
-		color = "FF0080"
-	}
-	method desmarcar(){
-		color = "FFFFFF"
-	}
-	
-	method pulsar(){
-		tocadiscos.detenerfondo()
-		tocadiscos.tocarFondo(sonido)
-		tocadiscos.cancionActual(sonido)
-		
-	}
-	
-	
-}
+
 
 
 
