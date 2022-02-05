@@ -84,12 +84,11 @@ class Interfaz {
 		area.posicionarItems(items)
 		items.forEach({ item => game.addVisual(item) })
 	}
-	method display(){
-		game.addVisual(mp3)
-		items = self.itemsActuales()
-		self.posicionarItems()
-		
-	}
+	//method display(){
+	//	items = self.itemsActuales()
+	//	self.posicionarItems()
+	//	
+	//}
 	method itemsActuales()
 	method removerse(){
 		self.removerItems()
@@ -132,13 +131,20 @@ class Cancion{
 
 
 class Menu inherits Interfaz {
+	var imagen = ""
 	const property position
-	var property puntero = new Puntero (posicionInicial = game.at(5,0))
+	var property puntero = new Puntero (posicionInicial = game.origin())
 	
+	method inicializar(){
+		items.forEach{c=>c.desmarcar()}
+	}
 	method puntero() = puntero
 	override method itemsActuales() = items
-	override method display(){
-		super()	
+	method display(){
+		self.inicializar()
+		if(imagen != "")game.addVisual(imagen)
+		items = self.itemsActuales()
+		self.posicionarItems()
 		self.agregarPuntero()
 	}
 	override method removerItems() {
@@ -146,7 +152,7 @@ class Menu inherits Interfaz {
 		game.removeVisual(puntero)
 	}
 	method agregarPuntero() {
-		puntero.position(items.head().position())
+		puntero.position(items.last().position())
 		game.addVisual(puntero)
 		modo.puntero(puntero)
 	}
@@ -164,7 +170,6 @@ object pantallaInicio {
 		opciones.forEach{ opcion => game.removeVisual(opcion) }
 	}
 	method ganar(){
-		//game.clear()
 		game.allVisuals().forEach{v=>game.removeVisual(v)}
 		self.mostrarSorpresa()
 		game.schedule(6000,{game.allVisuals().forEach{v=>game.removeVisual(v)} self.iniciar()})
@@ -190,12 +195,6 @@ object pantallaInicio {
 		self.iniciar()
 	}
 	
-	/*method volver(){
-		if(game.hasVisual(valen)){game.removeVisual(valen)}
-		 opciones.forEach{ opcion => game.addVisual(opcion) }
-        game.addVisual(punteroInicio)
-        modo.puntero(punteroInicio)
-	}*/
 	
 	method iniciar() {
         
@@ -203,13 +202,11 @@ object pantallaInicio {
         cantidadMonedas.inicializar()
         game.addVisual(fondo)
         self.animar()
-        opciones.forEach{ opcion => game.addVisual(opcion) }
-        game.addVisual(punteroInicio)
-        //comenzar.marcar()
+        menuInicio.display()
         game.addVisual(bitcoinInicio)
         bitcoinInicio.animar()
-        //game.schedule(3000,{tocadiscos.tocarFondo(tocadiscos.cancionActual())})
         modo.puntero(punteroInicio)
+        
        
     }
     
@@ -462,3 +459,10 @@ const opcionAbajo = new Direccion(lugares = 1,sentido= abajo)
 const opcionDerecha = new Direccion(lugares = 1,sentido= derecha)
 const opcionIzquierda = new Direccion(lugares = 1,sentido= izquierda)
 
+
+const menuInicio = new Menu(
+	position = game.at(1,0),
+	area = new AreaMenu(inicio = game.at(10,6), alto = 4, ancho = 1),
+	items = [salir,creditos,musica,comenzar],
+	puntero = punteroInicio
+)

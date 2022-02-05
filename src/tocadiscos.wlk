@@ -36,6 +36,32 @@ object tocadiscos {
     }
 }
 
+class Cancion{
+	var property text
+	var sonido
+	var property position = game.origin()
+	var color = "ffffff"
+	var cancionActual = ""
+	
+	method textColor() = color
+	
+	method marcar(){
+		color = "FF0080"
+	}
+	method desmarcar(){
+		color = "FFFFFF"
+	}
+	
+	method pulsar(){
+		tocadiscos.detenerfondo()
+		tocadiscos.tocarFondo(sonido)
+		tocadiscos.cancionActual(sonido)
+		
+	}
+	
+	
+}
+
 const persona51 = new Cancion(text = "Battle For Everyone Soul(Persona 5)", sonido = persona5db)
 
 
@@ -53,6 +79,7 @@ const sunset = new Cancion (text = "Sunset Breeze(Gran Turismo)", sonido = gtSun
 
 
 const menuMusica = new Menu(
+	imagen = mp3,
 	position = game.at(1,0),
 	area = new AreaMenu(inicio = game.at(9,4), alto = 5, ancho = 5),
 	items = [atras,persona51,darkLine,afterRace,lotus,sunset]

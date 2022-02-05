@@ -2,6 +2,10 @@ import wollok.game.*
 import example.*
 import tocadiscos.*
 
+/*
+import menues.*
+ */
+
 program juego{
 	game.cellSize(32)
 	game.height(15)
