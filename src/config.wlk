@@ -27,11 +27,13 @@ const menuMusica = new Menu(
 	imagen = "assets/unnamed.png",
 	position = game.at(1,0),
 	area = new AreaMenu(inicio = game.at(9,4), alto = 5, ancho = 5),
-	items = [atras,persona51,darkLine,afterRace,lotus,sunset]
+	items = [atras,persona51,darkLine,afterRace,lotus,sunset],
+	puntero = punteroMusica
 	)
 
 // Puntero
 
+const punteroMusica = new Puntero(posicionInicial = game.at(9,5))
 const punteroInicio = new Puntero(posicionInicial = game.at(10, 9))
 const colisionador = new Puntero(image = "assets/cursor2.png",posicionInicial = game.at(15,3),libre = true)
 
@@ -61,4 +63,15 @@ const errores = ["assets/werror.png","assets/werrpr.png"]
 
 const  bitcoinInicio = new Bitcoin (position = game.at(1,11)) 
 
+// Sonido
+
+const canciones = [persona5db,gtDarkLine,gtAfterRace,gtLotus,gtSunset]
+const meow = "assets/cat-meow-2.mp3"
+const windowsApagar = "assets/windowsApagar.mp3"
+const errorWindows = "assets/errorSonido.mp3"
+const persona5db = "assets/battleForEveryoneSoul.mp3"
+const gtDarkLine = "assets/dark-line.mp3"
+const gtAfterRace = "assets/lounge.mp3"
+const gtLotus = "assets/lotus-in-dam.mp3"
+const gtSunset = "assets/sunset-breeze.mp3"
 

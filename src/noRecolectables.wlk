@@ -1,6 +1,6 @@
 import wollok.game.*
 import tocadiscos.*
-
+import config.*
 
 class Imagen{
 	var property image

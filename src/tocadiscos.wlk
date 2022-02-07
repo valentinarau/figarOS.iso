@@ -1,5 +1,5 @@
 import wollok.game.*
-import example.*
+import config.*
 
 object tocadiscos {
 	var cancionCreditos
@@ -78,12 +78,6 @@ const sunset = new Cancion (text = "Sunset Breeze(Gran Turismo)", sonido = gtSun
 
 
 
-const menuMusica = new Menu(
-	imagen = mp3,
-	position = game.at(1,0),
-	area = new AreaMenu(inicio = game.at(9,4), alto = 5, ancho = 5),
-	items = [atras,persona51,darkLine,afterRace,lotus,sunset]
-	)
 
 object mp3{
 	var property position = game.at(2,0)
@@ -91,12 +85,3 @@ object mp3{
 }
 
 
-const canciones = [persona5db,gtDarkLine,gtAfterRace,gtLotus,gtSunset]
-const meow = "assets/cat-meow-2.mp3"
-const windowsApagar = "assets/windowsApagar.mp3"
-const errorWindows = "assets/errorSonido.mp3"
-const persona5db = "assets/battleForEveryoneSoul.mp3"
-const gtDarkLine = "assets/dark-line.mp3"
-const gtAfterRace = "assets/lounge.mp3"
-const gtLotus = "assets/lotus-in-dam.mp3"
-const gtSunset = "assets/sunset-breeze.mp3"

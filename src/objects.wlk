@@ -1,6 +1,7 @@
 import wollok.game.*
 import example.*
 import tocadiscos.*
+import config.*
 
 class Windows{
 	var property imagenes = ["assets/wxp.png","assets/w2000.png","assets/w98.png"]

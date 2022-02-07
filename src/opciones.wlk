@@ -4,6 +4,7 @@ import interfaz.*
 import recolectables.*
 import tocadiscos.*
 import config.*
+
 class Opcion{
 	var property imagenR
 	var property image

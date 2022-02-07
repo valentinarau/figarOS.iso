@@ -1,19 +1,17 @@
 import wollok.game.*
 import interfaz.*
+import tocadiscos.*
 
 class Menu inherits Interfaz {
 	var imagen = ""
 	const property position
 	var property puntero = new Puntero (posicionInicial = game.origin())
 	
-	method inicializar(){
-		items.forEach{c=>c.desmarcar()}
-	}
+
 	method puntero() = puntero
 	override method itemsActuales() = items
 	method display(){
-		self.inicializar()
-		if(imagen != "")game.addVisual(imagen)
+		if(!imagen.isEmpty())game.addVisual(mp3)
 		items = self.itemsActuales()
 		self.posicionarItems()
 		self.agregarPuntero()
