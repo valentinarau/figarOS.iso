@@ -6,24 +6,18 @@ import noRecolectables.*
 import menues.*
 import config.*
 
-object pantallaInicio {
-	const property opciones = [comenzar, musica, creditos , salir]
+object juego {
 	const property opcionesGanar = [asuka,uwu,zeroTwo]
-	const property opcionesPerder = [rei,angel]
 	var property juegoActivo = false
 	
-	method remover(){
-		opciones.forEach{ opcion => game.removeVisual(opcion) }
-	}
 	method ganar(){
 		game.allVisuals().forEach{v=>game.removeVisual(v)}
 		self.mostrarSorpresa()
-		game.schedule(6000,{game.allVisuals().forEach{v=>game.removeVisual(v)} self.iniciar()})
+		game.schedule(6000,{game.allVisuals().forEach{v=>game.removeVisual(v)} pantallaInicio.iniciar()})
 	}
-	
 	method mostrarSorpresa(){
 		game.addVisual(fondo)
-        self.animar()
+        pantallaInicio.animar()
         
         game.addVisual(opcionesGanar.anyOne())
         game.addVisual(yatta)
@@ -32,9 +26,19 @@ object pantallaInicio {
         
 	}
 	
+}
+
+object pantallaInicio {
+	const property opciones = [comenzar, musica, creditos , salir]
+	const property opcionesGanar = [asuka,uwu,zeroTwo]
+	
+	method remover(){
+		opciones.forEach{ opcion => game.removeVisual(opcion) }
+	}
+	
 	method volver(){
 		game.allVisuals().forEach{v=>game.removeVisual(v)}
-		if(juegoActivo){
+		if(juego.juegoActivo()){
 		game.removeTickEvent("windows")
 		game.removeTickEvent("bitcoin")
 		}
@@ -44,7 +48,7 @@ object pantallaInicio {
 	
 	method iniciar() {
         
-        juegoActivo = false
+        juego.juegoActivo(false)
         cantidadMonedas.inicializar()
         game.addVisual(fondo)
         self.animar()
@@ -66,7 +70,7 @@ class Puntero {
 	var imagenMarcada = comenzar
 	var property posicionInicial
 	var property position = posicionInicial
-	var libre = false
+	const libre = false
 	
 	
 	
@@ -77,6 +81,7 @@ class Puntero {
 	method moverseHacia(donde){
 		if (!libre){if (donde.hayElementos(position)){
 			position = donde.mover(position)
+			
 			self.marcar()
 		}
 		
@@ -109,7 +114,6 @@ class Puntero {
 
 	method seleccionar() {
 		if(!game.getObjectsIn(position).isEmpty()){
-	
 			game.colliders(self).forEach{c => c.pulsar()}
 		}
 		}

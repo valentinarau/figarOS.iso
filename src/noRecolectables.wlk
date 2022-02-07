@@ -8,7 +8,7 @@ class Imagen{
 }
 
 object lauti{
-	var property image = "assets/lauti2.gif"
+	var property image = "assets/lauti.gif"
 	var property position = game.at(22,0)
 	method marcar(){}
 }
@@ -27,7 +27,7 @@ object figaro{
 	var property image = "assets/figaro.png"
 	var property position = game.at(12,2)
 	
-	method meow(){
+	method meows(){
 		game.say(self,"meow")
 		tocadiscos.tocar(meow)
 	}
@@ -60,13 +60,13 @@ object cantidadMonedas{
 object fondo{
 	var property image = "assets/car1.png"
 	var property position = game.origin()
-	var imagen1 = "assets/car1.png"
-	var imagen2= "assets/car2.png"
-	var imagen3= "assets/car3.png"
-	var imagen4 = "assets/car4.png"
-	var imagenes = [imagen1,imagen2,imagen3,imagen4]
+	const car1 = "assets/car1.png"
+	const car2 = "assets/car2.png"
+	const car3 = "assets/car3.png"
+	const car4 = "assets/car4.png"
+	const background = [car1,car2,car3,car4]
 	
 method animar(){
-	game.onTick(100, "carMoving", { => self.image (imagenes.anyOne() )})
+	game.onTick(100, "carMoving", { => self.image (background.anyOne() )})
 }
 }

@@ -34,7 +34,7 @@ class Bitcoin{
 	method marcar(){
 		game.removeVisual(self)
 		cantidadMonedas.aumentarMonedas()
-		figaro.meow()
+		figaro.meows()
 	}
 	
 	method animar(){
@@ -47,14 +47,14 @@ class Bitcoin{
 object generador{
 	
 	method generarBitcoin(){
-		game.onTick(3000,"bitcoin",{=> if (cantidadMonedas.numero()>10) {game.removeTickEvent("bitcoin") game.removeTickEvent("windows") game.schedule(500,{pantallaInicio.ganar()}) }
-			var bitcoin = new Bitcoin(position = game.at(1.randomUpTo(21),4.randomUpTo(11))) game.addVisual(bitcoin) bitcoin.animar() 
+		game.onTick(3000,"bitcoin",{=> if (cantidadMonedas.numero()>=10) {game.removeTickEvent("bitcoin") game.removeTickEvent("windows") game.schedule(500,{juego.ganar()}) }
+			const bitcoin = new Bitcoin(position = game.at(1.randomUpTo(21),4.randomUpTo(11))) game.addVisual(bitcoin) bitcoin.animar() 
 	})
 	
 	}
 	
 	method generarWindows(){
-		game.onTick(5000,"windows",{=>  var bug = new Windows () bug.image(bug.imagenes().anyOne()) if(cantidadBugs.numero() >10){bug.tirarError() } else {cantidadBugs.aumentarBugs()} game.addVisualIn(bug,game.at(1.randomUpTo(21),4.randomUpTo(11)))})
+		game.onTick(5000,"windows",{=>  const bug = new Windows () bug.image(bug.imagenes().anyOne()) if(cantidadBugs.numero() >10){bug.tirarError() } else {cantidadBugs.aumentarBugs()} game.addVisualIn(bug,game.at(1.randomUpTo(21),4.randomUpTo(11)))})
 	}
 	
 	

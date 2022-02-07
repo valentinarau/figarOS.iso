@@ -41,7 +41,6 @@ class Cancion{
 	var sonido
 	var property position = game.origin()
 	var color = "ffffff"
-	var cancionActual = ""
 	
 	method textColor() = color
 	
@@ -81,7 +80,7 @@ const sunset = new Cancion (text = "Sunset Breeze(Gran Turismo)", sonido = gtSun
 
 object mp3{
 	var property position = game.at(2,0)
-	var property image = "assets/unnamed.png"
+	var property image = "assets/celu.png"
 }
 
 

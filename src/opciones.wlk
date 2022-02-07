@@ -44,7 +44,7 @@ class Opcion{
 
 object comenzar inherits Opcion(image = "assets/comenzar.png",imagenR = "assets/comenzarR.png" ,imagenInicial = "assets/comenzar.png",position = game.at(10,9)){
 	override method pulsar(){
-		pantallaInicio.juegoActivo(true)
+		juego.juegoActivo(true)
 		pantallaInicio.remover()
 		game.addVisual(monedas)
         game.addVisual(cantidadMonedas)
@@ -76,6 +76,7 @@ object musica inherits Opcion(imagenR = "assets/MusicaR.png",image = "assets/mus
 		pantallaInicio.remover()
 		game.removeVisual(punteroInicio)
 		menuMusica.display()
+		
 		
 	}
 	

@@ -2,14 +2,33 @@ import wollok.game.*
 import interfaz.*
 import tocadiscos.*
 
+class Interfaz {
+	var property items = []
+	const area = new AreaMenu(inicio = game.at(0,0),alto=0,ancho=0)
+	
+	method posicionarItems(){
+		area.posicionarItems(items)
+		items.forEach({ item => game.addVisual(item) })
+	}
+	
+	method itemsActuales() = items
+	method removerse(){
+		self.removerItems()
+	}
+	method removerItems(){
+		self.itemsActuales().forEach{i => game.removeVisual(i)}
+	}
+	
+}
+
 class Menu inherits Interfaz {
-	var imagen = ""
-	const property position
+	var property opcionActual = ""
+	const imagen = ""
+	var property position
 	var property puntero = new Puntero (posicionInicial = game.origin())
 	
 
 	method puntero() = puntero
-	override method itemsActuales() = items
 	method display(){
 		if(!imagen.isEmpty())game.addVisual(mp3)
 		items = self.itemsActuales()
@@ -66,29 +85,14 @@ class AreaMenu {
  
 	method posicionarItems(items){
 		proxima = inicio
-		items.forEach{ i => if (self.estaLibre(proxima)) self.posicionarItem(i) proxima = self.proximaPosicionLibre()}
+		items.forEach{ i => self.posicionarItem(i)  }
 	}
 	method posicionarItem(i){
+		if (self.estaLibre(proxima)) 
 		i.position(proxima)
+		proxima = self.proximaPosicionLibre()
 	}
 }
 
 
-class Interfaz {
-	var property items = []
-	const area = new AreaMenu(inicio = game.at(0,0),alto=0,ancho=0)
-	
-	method posicionarItems(){
-		area.posicionarItems(items)
-		items.forEach({ item => game.addVisual(item) })
-	}
-	
-	method itemsActuales()
-	method removerse(){
-		self.removerItems()
-	}
-	method removerItems(){
-		self.itemsActuales().forEach{i => game.removeVisual(i)}
-	}
-	
-}
+
